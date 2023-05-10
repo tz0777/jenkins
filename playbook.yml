@@ -1,1 +1,8 @@
-
+---
+- hosts: all
+  become: true
+  tasks:
+          - name: nano install
+            ansible.builtin.yum:
+                    name: nano
+                    state: present
